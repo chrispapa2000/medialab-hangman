@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.35905878545971315" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" stylesheets="@dark.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.multi_proj.Controller">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="140.0" prefWidth="599.0">
+         <children>
+             <StackPane layoutX="200.0" layoutY="-5.0" prefHeight="140.54399571093762" prefWidth="599.0399817187506" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                 <Label fx:id="Stats" textAlignment="CENTER" />
+               <MenuBar StackPane.alignment="TOP_RIGHT">
+                 <menus>
+                   <Menu mnemonicParsing="false" text="Application">
+                     <items>
+                       <MenuItem mnemonicParsing="false" onAction="#onStartClick" text="Start" />
+                       <MenuItem mnemonicParsing="false" onAction="#onLoadClick" text="Load" />
+                       <MenuItem mnemonicParsing="false" onAction="#onCreateClick" text="Create" />
+                       <MenuItem mnemonicParsing="false" onAction="#terminate" text="Exit" />
+                     </items>
+                   </Menu>
+                   <Menu mnemonicParsing="false" text="Details">
+                     <items>
+                       <MenuItem mnemonicParsing="false" onAction="#onDictionaryClick" text="Dictionary" />
+                       <MenuItem mnemonicParsing="false" onAction="#onRoundsClick" text="Rounds" />
+                       <MenuItem mnemonicParsing="false" onAction="#onSolutionClick" text="Solution" />
+                     </items>
+                   </Menu>
+                 </menus>
+               </MenuBar>
+             </StackPane>
+
+
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <SplitPane dividerPositions="0.6346726381048865" layoutX="185.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="252.67199228906273" prefWidth="599.0399817187506" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <SplitPane dividerPositions="0.4726914557097348" prefHeight="156.67199521875014" prefWidth="598.271981742188" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <StackPane fx:id="LeftPane" layoutX="40.0" layoutY="3.0" prefHeight="155.13599526562516" prefWidth="279.55199146875026" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Label fx:id="DisplayedWord" text="" translateY="60.0" />
+                                          <ImageView fx:id="imageBearer" fitHeight="120.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" translateY="-20.0" />
+                                       </children></StackPane>
+                                 </children></AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <StackPane fx:id="PossChars" layoutX="77.0" layoutY="3.0" prefHeight="155.13599526562516" prefWidth="311.8079904843753" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <HBox fx:id="Hb" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" visible="false"/>
+                                    </StackPane>
+                                 </children></AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children></AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <SplitPane layoutX="113.0" layoutY="-48.0" prefHeight="139.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <items>
+                              <StackPane fx:id="DownPane" prefHeight="150.0" prefWidth="200.0">
+                                 <children>
+                                    <TextField fx:id="ChosenLetter" alignment="TOP_CENTER" maxWidth="30.0" minWidth="30.0" prefHeight="3.0" prefWidth="30.0" translateX="20.0" translateY="20.0" visible="false">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets></TextField>
+                                    <TextField fx:id="ChosenPos" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" translateX="20.0" translateY="-20.0" visible="false" />
+                                    <Label fx:id="description1" text="Choose Position:" translateX="-40.0" translateY="-20.0" visible="false" />
+                                    <Label fx:id="description2" text="Choose Letter:" translateX="-35.0" translateY="20.0" visible="false" />
+                                    <Button fx:id="GoButton" mnemonicParsing="false" onAction="#onLetterChosen" text="Go" translateX="80.0" visible="false" />
+                                 </children>
+                              </StackPane>
+                           </items></SplitPane>
+                     </children></AnchorPane>
+              </items>
+            </SplitPane>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
